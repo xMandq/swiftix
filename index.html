@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="SX.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Swiftix</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="homeTab" href="index.html">Home</a></li>
+                <li><a id="discordTab" href="discord.html">Discord</a></li>
+                <li><a id="panelsTab" href="panels.html">Panels</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="changelog-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Changelogs</h2>
+
+            <ul>
+                <div>
+                    <p><b>[ 5 / 19 / 2024 ]</b></p>
+                    <ul>
+                        <li>[ ⭐ ] Released beta version</li>
+                        <li>[ 🐛 ] Fixed visual clothes bug</li>
+                        <li>[ 🐛 ] Fixed wheel checker bug</li>
+                    </ul>
+                </div>
+            </ul>
+
+            <hr>
+        </div>
+    </div>
+
+    <div id="content" style="width: 80%; max-width: 800px;">
+        <section id="welcome-section" class="border-section">
+            <div class="text-content">
+                <h1>Welcome to Swiftix</h1>
+                <p>Ready to elevate your gameplay beyond ordinary farming and legal activities? Take your experience to the next level with our new internal 😉</p>
+            </div>
+        </section>
+
+        <section id="docs-section" class="border-section">
+            <div class="docs-content">
+                <h1>Growpai Lua Documents</h1>
+                <p>Learn more about Swiftix lua docs and make your own script now! 📜</p>
+                <br>
+                <button class="docs-button" onclick="window.open('https://github.com/xMandq/swiftix-docs/blob/main/lua%20docs.md', '_blank')">View Docs</button>
+            </div>
+        </section>
+        <section id="purchase-section" class="border-section">
+            <div class="purchase-content">
+                <h1>Buy Now</h1>
+                <p>You can buy Swiftix for cheap and affordable price</p>
+                <p>Join our discord and create a ticket to get your internal asap</p>
+                <br>
+                <button class="docs-button" onclick="window.location.href='panels.html';">Check Prices</button>
+                <button class="docs-button" onclick="window.open(' https://discord.gg/wMBY7Gh7Mr', '_blank')">Discord</button>
+            </div>        
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Swiftix. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    const currentPage = window.location.pathname;
+
+    function setActiveTab() {
+        document.querySelectorAll('nav ul li a').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        if (currentPage.includes('index.html')) {
+            document.getElementById('homeTab').classList.add('active');
+        } else if (currentPage.includes('discord.html')) {
+            document.getElementById('discordTab').classList.add('active');
+        } else if (currentPage.includes('panels.html')) {
+            document.getElementById('panelsTab').classList.add('active');
+        }
+    }
+
+    setActiveTab();
+</script>
+<div class="stars">
+    <script>
+        const numStars = 100;
+        const container = document.querySelector('.stars');
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            const size = Math.random() * 2;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            container.appendChild(star);
+        }
+    </script>
+</div>
+</html>

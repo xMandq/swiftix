@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="SX.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Swiftix</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="homeTab" href="index.html">Home</a></li>
+                <li><a id="discordTab" href="discord.html">Discord</a></li>
+                <li><a id="panelsTab" href="panels.html">Panels</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="panel-section">
+        <div class="panel">
+            <h2>Swiftix</h2>
+            <p style="text-align: center;"><b>5 Dls</b></p>
+            <p>Tired of buying trash and overpriced internals?</p>
+            <p>Try our internal for cheap and excellent quality now!</p>
+            <p>With daily updates and bugs fixes</p>
+            <p>Make your own script without anyone help now!</p>
+            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase</button>
+        </div>
+        <div class="panel">
+            <h2>Mandq Proxy</h2>
+            <p style="text-align: center;"><b>25 Dls</b></p>
+            <p>Can't trust other proxies and scared to get hacked?</p>
+            <p>Try Mandq Proxy for cheap and 100% safe play</p>
+            <p>Full source made by Lua, not C++.</p>
+            <p>This enables you to check everything the proxy does. So you can check for sketchy stuff if found.</p>
+            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase</button>
+        </div>
+        <div class="panel">
+            <h2>Mandq Proxy</h2>
+            <p style="text-align: center;"><b>7.5 Euros</b></p>
+            <p>You can directly purchase Mandq Proxy via PayPal payment instead of waiting for your DLs seller to sell you some DLs.</p>
+            <p>Payment is 100% secure. If anything goes wrong, all money will be refunded.</p>
+            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Swiftix. All rights reserved.</p>
+    </footer>
+    <script>
+        const currentPage = window.location.pathname;
+
+        function setActiveTab() {
+            document.querySelectorAll('nav ul li a').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            if (currentPage.includes('index.html')) {
+                document.getElementById('homeTab').classList.add('active');
+            } else if (currentPage.includes('discord.html')) {
+                document.getElementById('discordTab').classList.add('active');
+            } else if (currentPage.includes('panels.html')) {
+                document.getElementById('panelsTab').classList.add('active');
+            }
+        }
+        setActiveTab();
+    </script>
+</body>
+<div class="stars">
+    <script>
+        const numStars = 100;
+        const container = document.querySelector('.stars');
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            const size = Math.random() * 2;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            container.appendChild(star);
+        }
+    </script>
+</html>
