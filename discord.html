@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="SX.jpg">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiftix</title>
 </head>
 <body>
@@ -14,6 +15,7 @@
                 <li><a id="homeTab" href="index.html">Home</a></li>
                 <li><a id="discordTab" href="discord.html">Discord</a></li>
                 <li><a id="panelsTab" href="panels.html">Panels</a></li>
+                <li><a id="aboutTab" href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -21,11 +23,11 @@
     <div id="content" style="width: 80%; max-width: 800px;">
         <section id="discord-section" class="border-section">
             <div class="discord-content">
-                <h1>Join Our Discord</h1>
-                <iframe src="https://discord.com/widget?id=1074940201471856680&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                <p>Join our Discord server to get support, updates, and chat with other users!</p>
+                <h1 style="text-align: center;">Join Our Discord</h1>
+                <iframe src="https://discord.com/widget?id=1074940201471856680&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" style="padding-left: 15px;"></iframe>
+                <p style="text-align: center;">Join our Discord server to get support, updates, and chat with other users!</p>
                 <br>
-                <button class="docs-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Join Discord</button>
+                <button class="discord-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Join Discord</button>
             </div>
         </section>
     </div>
@@ -43,11 +45,12 @@
             tab.classList.remove('active');
         });
 
-        // Add active class to the corresponding tab
         if (currentPage.includes('index.html')) {
             document.getElementById('homeTab').classList.add('active');
         } else if (currentPage.includes('discord.html')) {
             document.getElementById('discordTab').classList.add('active');
+        } else if (currentPage.includes('about.html')) {
+            document.getElementById('aboutTab').classList.add('active');
         } else if (currentPage.includes('panels.html')) {
             document.getElementById('panelsTab').classList.add('active');
         }
