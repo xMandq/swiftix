@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="SX.jpg">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiftix</title>
 </head>
 <body>
@@ -14,6 +15,7 @@
                 <li><a id="homeTab" href="index.html">Home</a></li>
                 <li><a id="discordTab" href="discord.html">Discord</a></li>
                 <li><a id="panelsTab" href="panels.html">Panels</a></li>
+                <li><a id="aboutTab" href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -31,10 +33,19 @@
                         <li>[ 🐛 ] Fixed visual clothes bug</li>
                         <li>[ 🐛 ] Fixed wheel checker bug</li>
                     </ul>
+                    <hr>
+                    <p><b>[ 5 / 20 / 2024 ]</b></p>
+                    <ul>
+                        <li>[ 💡 ] Added <code>Webhook(std::string message)</code> in lua api </li>
+                        <li>[ 💡 ] Added <code>IsReady(int x,int y)</code> in lua api </li>
+                        <li>[ 💡 ] Added <code>GetApp(App)</code> in lua api </li>
+                        <li>[ 💡 ] Added Growscan tab in swiftix </li>
+                        <li>[ 💡 ] Added weather changer </li>
+                        <li>[ 💡 ] Added /warp </li>
+                    </ul>
                 </div>
             </ul>
 
-            <hr>
         </div>
     </div>
 
@@ -43,6 +54,7 @@
             <div class="text-content">
                 <h1>Welcome to Swiftix</h1>
                 <p>Ready to elevate your gameplay beyond ordinary farming and legal activities? Take your experience to the next level with our new internal 😉</p>
+                <button class="docs-button" onclick="window.location.href='about.html';">Read More</button>
             </div>
         </section>
 
@@ -83,6 +95,8 @@
             document.getElementById('homeTab').classList.add('active');
         } else if (currentPage.includes('discord.html')) {
             document.getElementById('discordTab').classList.add('active');
+        } else if (currentPage.includes('about.html')) {
+            document.getElementById('aboutTab').classList.add('active');
         } else if (currentPage.includes('panels.html')) {
             document.getElementById('panelsTab').classList.add('active');
         }
