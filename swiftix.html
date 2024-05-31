@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="SX.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Swiftix</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="homeTab" href="index.html">Home</a></li>
+                <li><a id="discordTab" href="discord.html">Discord</a></li>
+                <li><a id="panelsTab" href="panels.html">Panels</a></li>
+                <li><a id="DonationtTab" href="donations.html">Donations</a></li>
+                <li><a id="aboutTab" href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content" style="width: 80%; max-width: 800px;">
+        <section id="discord-section" class="border-section">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="image1.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image2.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image3.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image4.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image5.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image6.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image7.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image8.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image9.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image10.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image11.png" style="width:100%">
+                </div>
+            </div>
+
+            <div class="info-boxes">
+                <div class="box">
+                    <h2>Developers</h2>
+                    <p>Made fully by Mandq and Rbsh</p>
+                    <p>For more information contanct us through discord:</p>
+                    <p>mandq & 0xhulk</p>
+                </div>
+                <div class="box">
+                    <h2>More Information</h2>
+                    <p>The internal will <b>never</b> be free.</p>
+                    <p>Any free copy is a stealer 100%</p>
+                    <p>If you are a developer and want to help us, contact us on discord.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Swiftix. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    const currentPage = window.location.pathname;
+
+    function setActiveTab() {
+        document.querySelectorAll('nav ul li a').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        if (currentPage.includes('index.html')) {
+            document.getElementById('homeTab').classList.add('active');
+        } else if (currentPage.includes('discord.html')) {
+            document.getElementById('discordTab').classList.add('active');
+        } else if (currentPage.includes('about.html')) {
+            document.getElementById('aboutTab').classList.add('active');
+        } else if (currentPage.includes('panels.html')) {
+            document.getElementById('panelsTab').classList.add('active');
+        } else if (currentPage.includes('swiftix.html')) {
+            document.getElementById('aboutTab').classList.add('active');
+        } else if (currentPage.includes('donations.html')) {
+            document.getElementById('DonationtTab').classList.add('active');
+        }
+    }
+
+    setActiveTab();
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+</body>
+<div class="stars">
+    <script>
+        const numStars = 100;
+        const container = document.querySelector('.stars');
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            const size = Math.random() * 2;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            container.appendChild(star);
+        }
+    </script>
+</div>
+</html>
