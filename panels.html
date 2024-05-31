@@ -15,6 +15,7 @@
                 <li><a id="homeTab" href="index.html">Home</a></li>
                 <li><a id="discordTab" href="discord.html">Discord</a></li>
                 <li><a id="panelsTab" href="panels.html">Panels</a></li>
+                <li><a id="DonationtTab" href="donations.html">Donations</a></li>
                 <li><a id="aboutTab" href="about.html">About</a></li>
             </ul>
         </nav>
@@ -29,9 +30,11 @@
             <p>Full source made by Lua, not C++.</p>
             <p>This enables you to check everything the proxy does. So you can check for sketchy stuff if found.</p>
             <hr>
-            <p><i>Note: this pundle can also be purchased via PayPal or Crypto, for more information contact my discord</i></p>
-            <p><i>Discord: mandq</i></p>
-            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase</button>
+            <p><i>Note: this proxy can also be purchased <b>via PayPal, Creditcard and Crypto</b>. To purchase click the <b>button below</b></i></p>
+            <div class="button-container">
+            <button class="purchase-button" data-sellix-product="6658ab34402b0" type="submit" alt="Buy Now with sellix.io">Purchase With Paypal etc.</button>
+            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase With Dls</button>
+            </div>
         </div>
         <div class="panel">
             <h2 class="shiny-text">Mandq Proxy with Swiftix</h2>
@@ -39,10 +42,11 @@
             <p>Want to purchase Swiftix and Proxy for cheaper price?</p>
             <p>Buy both for 30 Dls instead of 35!</p>
             <hr>
-            <p><i>Note: this pundle can also be purchased via PayPal or Crypto, for more information contact my discord</i></p>
-            <p><i>Discord: mandq</i></p>
-
-            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase</button>
+            <p><i>Note: this bundle can also be purchased <b>via PayPal, Creditcard and Crypto</b>. To purchase click the <b>button below</b></i></p>
+            <div class="button-container">
+            <button class="purchase-button" data-sellix-product="665908dbd47d8" type="submit" alt="Buy Now with sellix.io">Purchase With Paypal etc.</button>
+            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase With Dls</button>
+            </div>
         </div>
         <div class="panel">
             <h2>Swiftix</h2>
@@ -51,34 +55,39 @@
             <p>Try our internal for cheap and excellent quality now!</p>
             <p>With daily updates and bugs fixes</p>
             <p>Make your own script without anyone help now!</p>
-            <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase</button>
+            <div class="button-container">
+                <button class="purchase-button" onclick="window.open('https://discord.gg/wMBY7Gh7Mr', '_blank')">Purchase With Dls</button>
+            </div>
         </div>
-    </div>
+    </div>    
 
     <footer>
         <p>&copy; 2024 Swiftix. All rights reserved.</p>
     </footer>
     <script>
-        const currentPage = window.location.pathname;
-    
-        function setActiveTab() {
-            document.querySelectorAll('nav ul li a').forEach(tab => {
-                tab.classList.remove('active');
-            });
-    
-            if (currentPage.includes('index.html')) {
-                document.getElementById('homeTab').classList.add('active');
-            } else if (currentPage.includes('discord.html')) {
-                document.getElementById('discordTab').classList.add('active');
-            } else if (currentPage.includes('about.html')) {
-                document.getElementById('aboutTab').classList.add('active');
-            } else if (currentPage.includes('panels.html')) {
-                document.getElementById('panelsTab').classList.add('active');
-            }
+    const currentPage = window.location.pathname;
+
+    function setActiveTab() {
+        document.querySelectorAll('nav ul li a').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        if (currentPage.includes('index.html')) {
+            document.getElementById('homeTab').classList.add('active');
+        } else if (currentPage.includes('discord.html')) {
+            document.getElementById('discordTab').classList.add('active');
+        } else if (currentPage.includes('about.html')) {
+            document.getElementById('aboutTab').classList.add('active');
+        } else if (currentPage.includes('panels.html')) {
+            document.getElementById('panelsTab').classList.add('active');
+        } else if (currentPage.includes('donations.html')) {
+            document.getElementById('DonationtTab').classList.add('active');
         }
-    
-        setActiveTab();
+    }
+
+    setActiveTab();
     </script>
+        <script src="https://cdn.sellix.io/static/js/embed.js"></script>
 </body>
 <div class="stars">
     <script>
