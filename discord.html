@@ -15,6 +15,7 @@
                 <li><a id="homeTab" href="index.html">Home</a></li>
                 <li><a id="discordTab" href="discord.html">Discord</a></li>
                 <li><a id="panelsTab" href="panels.html">Panels</a></li>
+                <li><a id="DonationtTab" href="donations.html">Donations</a></li>
                 <li><a id="aboutTab" href="about.html">About</a></li>
             </ul>
         </nav>
@@ -53,6 +54,8 @@
             document.getElementById('aboutTab').classList.add('active');
         } else if (currentPage.includes('panels.html')) {
             document.getElementById('panelsTab').classList.add('active');
+        } else if (currentPage.includes('donations.html')) {
+            document.getElementById('DonationtTab').classList.add('active');
         }
     }
 
@@ -73,4 +76,3 @@
             container.appendChild(star);
         }
     </script>
-</html>
